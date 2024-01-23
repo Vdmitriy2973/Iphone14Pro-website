@@ -1,0 +1,421 @@
+html
+{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar
+{
+    width: 0px;
+}
+
+*,*::before,*::after
+{
+    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: #fff;
+}
+
+:root 
+{
+    --bg-color: #0A0A0A;
+    --text-color: #717171;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 1. Header */
+
+.header
+{
+    background-color: var(--bg-color);
+}
+
+
+.header__inner
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    font-size: 24px;
+    height: 113px;
+    z-index: 2;
+    position: relative;
+}
+
+.header-nav__list
+{
+    gap:30px;
+    display: flex;
+    align-content: center;
+}
+
+.header-nav-btn
+{
+    width: 40px;
+    max-height: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    justify-self: center;
+}
+
+.header-nav-btn span 
+{
+    height: 2px;
+    margin-top: 10px;
+    display: flex;
+    width:100%;
+    background-color: #fff;
+}
+
+.header-logo
+{
+    margin: 0 auto;
+}
+
+.header-nav__list li a 
+{
+    font-family: 'Inter',sans-serif;
+    color: var(--text-color);
+    transition: .2s ease-in;
+}
+
+.header-nav__list li a:hover 
+{
+    color:#fff;
+}
+
+.header-nav__list-mobile
+{
+    gap:62px;
+    background-color: #000;
+    display: none;
+    text-align: center;
+    padding: 30px 0px;
+    position: absolute;
+    left:0;
+    right:0;
+    height: calc(100vh - 113px);
+    justify-content: center;
+    margin-top: -550px;
+    transition: margin .3s ease;
+}
+
+.header-nav__list-mobile.open 
+{
+    margin-top:0px;
+    z-index: 1;
+}
+
+.header-nav__list-mobile li a 
+{
+    font-size: 34px;
+    font-family: 'Inter',sans-serif;
+    color: var(--text-color);
+    transition: .2s ease-in;
+}
+
+.header-nav__list-mobile li a:hover 
+{
+    color:#fff;
+}
+
+.header-phone_number
+{
+    font-family: 'Inter',sans-serif;
+    position: relative;
+    justify-self: end;
+    color: var(--text-color);
+}
+
+/* 2. Iphone 14 Pro */
+
+.iphone_colors
+{
+    background-color: #F5F5F7;
+}
+
+.iphone_colors__title
+{
+    padding-top: 71px;
+    font-family: 'Inter',sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    color: #490E84;
+}
+
+.iphone__img 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.iphone-choice-btn
+{
+    padding-top: 25px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.iphone-choice-btn button
+{
+    background-color: #490E84;
+    border-radius: 30px;
+    padding: 22px 119px;
+    border:none;
+    font-family: 'Inter',sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.iphone-choice-btn button:hover 
+{
+    background-color:#3c0e6a;
+}
+
+
+
+/* 3. What's new */
+
+.what_is_new__title
+{
+    color:var(--text-color);
+    font-size: 32px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 87px;
+}
+
+.what_is_new-information
+{
+    margin-top: 50px;
+    display: flex;
+    gap:191px;
+}
+
+.what_is_new-text
+{
+    flex-basis: 560px;
+}
+
+.what_is_new-paragraph
+{
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-family: 'Inter',sans-serif;
+}
+
+.what_is_new-paragraph:last-child
+{
+    margin-bottom: 0px;
+}
+
+.bold-text
+{
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* 4. */
+.choice_color__title
+{
+    margin-top:150px;
+    font-size: 32px;
+    color:var(--text-color);
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.choice_color
+{
+    background-color: #fff;
+}
+
+.choice-color__iphone_colors 
+{
+    margin-top: 50px;
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: #fff;
+}
+
+.iphone_color p
+{
+    text-align: center;
+    font-family: "Inter",sans-serif;
+}
+
+.iphone_color-name
+{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:var(--bg-color);
+}
+
+.iphone_color-descr
+{
+    color: var(--text-color);
+    margin-top: 10px;
+    font-family: "Inter",sans-serif;
+}
+
+/* 5. Order */
+
+.order_iphone
+{
+    margin-top:150px;
+    display: flex;
+    max-height: 600px;
+}
+
+.order_application
+{
+    background-color: #574B63;
+    flex-basis: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 93px;
+    text-align: center;
+}
+
+.order_application__title
+{
+    margin-top:137px;
+    font-size: 32px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+}
+
+.order_application__form
+{
+    margin-top:72px;
+}
+
+.order_application__form > input 
+{
+    background-color: transparent;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #F5F5F5;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.form_number
+{
+    margin-top: 30px;
+}
+
+.form_descr
+{
+    color: var(--text-color);
+    margin-top:30px;
+    font-size: 14px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+}
+
+.form_order-btn
+{
+    color: #490E84;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 16px 81px;
+    font-family: 'Inter',sans-serif;
+    margin-top: 30px;
+    border: 1px solid white;
+    border-radius: 25px;
+    transition: .3s ease;
+}
+
+.form_order-btn:hover
+{
+    background-color: #e6e5e5;
+}
+
+.form_order-btn:active
+{
+    background-color: #d0cdcd;
+}
+
+/* 6. Footer */
+
+.footer 
+{
+    background-color: var(--bg-color);
+}
+
+.footer__inner
+{
+    padding: 40px 0px;
+}
+
+.footer_nav-list
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+
+.footer_nav-logo
+{
+    margin:0 auto;
+}
+
+.footer_nav-number
+{
+    justify-self: end;
+}
+
+.footer_nav-list a 
+{
+    color: #717171;
+    font-family: 'Inter',sans-serif;
+}
+
+.footer_nav-item
+{
+    font-size: 14px;
+}
+
+.footer_nav-number
+{
+    font-size: 24px;
+}
+
+@keyframes appear
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
